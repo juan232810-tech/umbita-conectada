@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMBITA CONECTADA</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2f5d3a">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>UMBITA CONECTADA</h1>
+        <p>Municipio que une a la comunidad</p>
+    </header>
+
+    <main>
+        <button id="notificaciones" type="button">Activar notificaciones</button>
+        <p id="mensaje-notif" role="status"></p>
+
+        <div class="veredas">
+            <label for="veredas">Vereda</label>
+            <select id="veredas"></select>
+        </div>
+
+        <div class="contenedor-contactos">
+            <h2 id="titulo-vereda">Elige tu vereda</h2>
+            <div id="lista-contactos"></div>
+        </div>
+
+        <div class="cartelera">
+            <h2>Cartelera de avisos</h2>
+            <div id="lista-avisos"></div>
+        </div>
+
+        <details class="agregar">
+            <summary>Publicar un aviso</summary>
+            <div class="formulario">
+                <label for="aviso-vereda">Para qué vereda</label>
+                <select id="aviso-vereda"></select>
+                <label for="aviso-tipo">Tipo</label>
+                <select id="aviso-tipo">
+                    <option>Reunión</option>
+                    <option>Servicio público</option>
+                    <option>Evento</option>
+                    <option>Salud</option>
+                    <option>Otro</option>
+                </select>
+                <label for="aviso-fecha">Fecha del aviso (opcional)</label>
+                <input id="aviso-fecha" type="date">
+                <label for="aviso-texto">Mensaje</label>
+                <textarea id="aviso-texto" rows="3" maxlength="300"></textarea>
+                <button id="publicar" type="button">Publicar aviso</button>
+                <p id="mensaje-aviso" role="status"></p>
+            </div>
+        </details>
+
+        <details class="agregar">
+            <summary>Agregar un contacto</summary>
+            <div class="formulario">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text">
+                <label for="oficio">Qué hace (ej: transporte, tienda, líder)</label>
+                <input id="oficio" type="text">
+                <label for="telefono">Celular (solo números)</label>
+                <input id="telefono" type="tel" inputmode="numeric">
+                <button id="guardar" type="button">Guardar contacto</button>
+                <p id="mensaje" role="status"></p>
+            </div>
+        </details>
+        <div class="mercado">
+            <h2>Mercado de la vereda</h2>
+            <div id="lista-productos"></div>
+        </div>
+
+        <details class="agregar">
+            <summary>Vender un producto</summary>
+            <div class="formulario">
+                <label for="prod-vereda">Vereda donde se vende</label>
+                <select id="prod-vereda"></select>
+                <label for="prod-nombre">Producto</label>
+                <input id="prod-nombre" type="text" maxlength="80">
+                <label for="prod-precio">Precio en pesos</label>
+                <input id="prod-precio" type="number" inputmode="numeric" min="0">
+                <label for="prod-descripcion">Descripción (opcional)</label>
+                <textarea id="prod-descripcion" rows="2" maxlength="300"></textarea>
+                <label for="prod-foto">Foto (opcional)</label>
+                <input id="prod-foto" type="file" accept="image/*">
+                <label for="prod-vendedor">Tu nombre</label>
+                <input id="prod-vendedor" type="text" maxlength="60">
+                <label for="prod-telefono">Tu celular (solo números)</label>
+                <input id="prod-telefono" type="tel" inputmode="numeric">
+                <button id="publicar-producto" type="button">Publicar producto</button>
+                <p id="mensaje-producto" role="status"></p>
+            </div>
+        </details>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

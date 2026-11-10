@@ -1,0 +1,89 @@
+:root {
+    --verde: #2f5d3a;
+    --tierra: #7a4e2d;
+    --paja: #f3ecd9;
+    --texto: #2a2a24;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--paja);
+    color: var(--texto);
+    line-height: 1.5;
+}
+header {
+    background: var(--verde);
+    color: var(--paja);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+header h1 { margin: 0; font-size: 1.8rem; letter-spacing: .04em; }
+header p { margin: .25rem 0 0; font-style: italic; }
+main { max-width: 640px; margin: 0 auto; padding: 1rem; }
+label { display: block; margin: .8rem 0 .3rem; font-weight: bold; }
+select, input {
+    width: 100%; padding: .7rem; font-size: 1rem;
+    border: 2px solid var(--tierra); border-radius: 6px; background: #fff;
+}
+:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+h2 { color: var(--tierra); margin: 1.5rem 0 .5rem; }
+.contacto {
+    background: #fff; border-left: 5px solid var(--verde);
+    padding: .8rem 1rem; margin-bottom: .7rem;
+    display: flex; justify-content: space-between; align-items: center; gap: .5rem;
+}
+.contacto strong { display: block; }
+.contacto span { color: #555; font-size: .95rem; }
+.acciones a {
+    display: inline-block; padding: .5rem .8rem; margin-left: .3rem;
+    background: var(--verde); color: #fff; text-decoration: none;
+    border-radius: 6px; font-size: .9rem;
+}
+.vacio { color: #555; font-style: italic; }
+.agregar { margin-top: 1.5rem; }
+.agregar summary { cursor: pointer; font-weight: bold; color: var(--tierra); }
+button {
+    margin-top: 1rem; padding: .8rem 1.2rem; font-size: 1rem;
+    background: var(--tierra); color: #fff; border: 0; border-radius: 6px;
+}
+
+/* Cartelera */
+textarea {
+    width: 100%; padding: .7rem; font-size: 1rem; font-family: inherit;
+    border: 2px solid var(--tierra); border-radius: 6px; background: #fff;
+}
+.aviso {
+    background: #fff; border-left: 5px solid var(--tierra);
+    padding: .8rem 1rem; margin-bottom: .7rem;
+}
+.aviso.urgente { border-left-color: #b3261e; }
+.aviso-cabecera { display: flex; justify-content: space-between; gap: .5rem; font-size: .9rem; color: #555; }
+.aviso-tipo { font-weight: bold; color: var(--verde); }
+.aviso p { margin: .4rem 0 0; }
+.aviso-donde { font-size: .85rem; color: #555; }
+.aviso button { margin-top: .5rem; padding: .3rem .7rem; font-size: .85rem; background: #888; }
+.agregar + .cartelera, .cartelera + .agregar { margin-top: 1rem; }
+
+/* Privacidad del celular */
+.contacto span { display: block; }
+.acciones { display: flex; gap: .3rem; flex-shrink: 0; }
+.acciones button {
+    margin: 0; padding: .5rem .8rem; font-size: .9rem; background: var(--verde);
+}
+
+/* Mercado y notificaciones */
+.producto {
+    background: #fff; border-left: 5px solid var(--verde);
+    padding: .8rem 1rem; margin-bottom: .9rem;
+}
+.producto img {
+    display: block; width: 100%; max-height: 220px; object-fit: cover;
+    border-radius: 6px; margin-bottom: .6rem;
+}
+.producto strong { display: block; font-size: 1.1rem; }
+.producto .precio { font-weight: bold; color: var(--verde); }
+.producto p { margin: .3rem 0; }
+.producto button { margin-top: .6rem; background: var(--verde); }
+#notificaciones { margin: 1rem 0 .3rem; }
+#mensaje-notif { margin: .3rem 0 0; font-size: .95rem; }

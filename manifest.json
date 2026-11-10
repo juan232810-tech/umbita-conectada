@@ -1,0 +1,13 @@
+{
+  "name": "UMBITA CONECTADA",
+  "short_name": "Umbita",
+  "description": "Municipio que une a la comunidad",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3ecd9",
+  "theme_color": "#2f5d3a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
